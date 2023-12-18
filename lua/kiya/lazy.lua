@@ -34,14 +34,26 @@ require("lazy").setup({
 		'tpope/vim-fugitive'
 	},
 	-- LSP Support
+	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
 	{'neovim/nvim-lspconfig'},
  	{'williamboman/mason.nvim'},
  	{'williamboman/mason-lspconfig.nvim'},
-	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+
+    -- Autocompletion
 	{'hrsh7th/cmp-nvim-lsp'},
+	{'hrsh7th/cmp-nvim-lua'},
 	{'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-buffer'},
+    {'hrsh7th/cmp-path'},
+    {'saadparwaiz1/cmp_luasnip'},
 
 	-- Snippets
 	{'L3MON4D3/LuaSnip'},
 	{'rafamadriz/friendly-snippets'},
+
+    -- Codeium
+    {
+        'Exafunction/codeium.vim',
+        event = 'BufEnter'
+    }
 })
